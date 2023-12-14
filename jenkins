@@ -1,6 +1,9 @@
 pipeline {
 
 agent any
+ tools (
+ maven 'Maven'
+ )
 
 stages {
       stage ("clone the code") {
@@ -8,5 +11,10 @@ stages {
         git 'https://github.com/bhavanishankarveerla/vprofilebhavani.git'
 }
 }
+stage("build the code"){
+ steps{
+    script{
+      sh "mvn clean install package"
+    }
 }
 }
