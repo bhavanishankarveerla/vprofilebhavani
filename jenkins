@@ -1,0 +1,12 @@
+pipeline {
+
+agent any
+
+stages {
+      stage ("clone the code") {
+      steps{ 
+        git 'https://github.com/bhavanishankarveerla/vprofilebhavani.git'
+}
+}
+}
+}
