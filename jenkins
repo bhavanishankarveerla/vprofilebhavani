@@ -2,10 +2,10 @@ pipeline {
 
 agent any
  tools (
- maven 'Maven'
+ maven 'maven'
  )
 
-stages {
+stages{
       stage ("clone the code") {
       steps{ 
         git 'https://github.com/bhavanishankarveerla/vprofilebhavani.git'
